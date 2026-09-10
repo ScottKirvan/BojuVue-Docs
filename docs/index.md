@@ -1,30 +1,34 @@
-﻿---
+---
 layout: home
 
 hero:
-  name: "BojuVue-Docs"
-  text: "TODO - Short project headline"
-  tagline: TODO - Replace with your project tagline.
-  actions:
-    - theme: brand
-      text: View on GitHub
-      link: https://github.com/ScottKirvan/BojuVue-Docs
-    - theme: alt
-      text: Discord
-      link: https://discord.gg/TN6XJSNK5Y
+  name: "BojuVue"
+  text: "Shared Vue 3 components"
+  tagline: A component library published to npm, for any Vue 3 app — with VitePress-aware builds available where they help. Install it, register the components you need, and update later with npm update.
+# Action buttons manually disables in favor of BojuVue buttons
+#  actions:
+#    - theme: brand
+#      text: Get Started
+#      link: /guide/
+#    - theme: alt
+#      text: Components
+#      link: /components/
+#    - theme: alt
+#      text: View on GitHub
+#      link: https://github.com/ScottKirvan/BojuVue
 
 features:
-  - icon: 🚀
-    title: Feature One
-    details: TODO - Describe your first key feature here.
+  - icon: 🔀
+    title: Two builds, one import surface
+    details: Every component is exported from bojuvue. Components with VitePress-specific needs ship a second, fully independent implementation under the same name at bojuvue/vitepress — the import path is what disambiguates them.
 
-  - icon: 🛠️
-    title: Feature Two
-    details: TODO - Describe your second key feature here.
+  - icon: 📦
+    title: vitepress is optional
+    details: Installing the package alone never pulls in vitepress. Only importing from the /vitepress subpath does — the generic build has zero vitepress in its module graph.
 
-  - icon: 📖
-    title: Feature Three
-    details: TODO - Describe your third key feature here.
+  - icon: 🔗
+    title: vue is a peer dependency
+    details: A consuming site uses its own Vue instance — no duplicate copy of Vue in the bundle, no broken reactivity across component boundaries.
 ---
 
 <!-- Begin Sponsors -->
@@ -35,7 +39,10 @@ features:
     <img src="/sabelhawk_dark.png" alt="Sabelhawk Studios" width="300" class="sponsor-logo dark-only" />
     <img src="/sabelhawk_lite.png" alt="Sabelhawk Studios" width="300" class="sponsor-logo light-only" />
   </a>
-  <h3>Please support open source software:</h3>
+  <br><br>
+  <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem;">
+    If you're enjoying this project, or it's saved you some time, consider<br>buying me a coffee or becoming a sponsor — it helps keep the<br> projects going.
+  </p><br>
   <div style="display: flex; gap: 12px; justify-content: center; align-items: center; flex-wrap: wrap;">
   <a href="https://ko-fi.com/ScottKirvan" target="_blank">
     <img src="https://storage.ko-fi.com/cdn/kofi2.png?v=3" alt="Support on Ko-fi"  width="160"  />
@@ -45,7 +52,7 @@ features:
   </a>
   </div>
   <br>
-Thank you! Your help makes a real and direct difference.
+Thank you! Supporting indie devs makes a real difference.
 </div>
 
 <!-- End Sponsors -->
