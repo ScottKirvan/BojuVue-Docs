@@ -5,7 +5,7 @@ import { bojuvue } from 'bojuvue/vite'
 export default defineConfig({
   title: "BojuVue",
   description: "Shared Vue 3 component library for ScottKirvan's VitePress sites.",
-  base: '/BojuVue/',
+  base: '/BojuVue-Docs/',
   vite: {
     plugins: [bojuvue()],
   },
