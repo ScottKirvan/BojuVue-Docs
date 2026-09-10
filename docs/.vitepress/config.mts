@@ -1,6 +1,6 @@
-import { fileURLToPath, URL } from 'node:url'
+// import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vitepress'
-import type { Plugin } from 'vite'
+// import type { Plugin } from 'vite'
 
 // Components imported from ../src (outside docs/) still import `vue` and
 // `vitepress` themselves. Left alone, those imports resolve relative to the
@@ -24,6 +24,7 @@ import type { Plugin } from 'vite'
 // built dist/bojuvue.js from its own node_modules, with vue/vitepress
 // already resolved as externals at this repo's own build time — ordinary
 // npm peer-dependency resolution, nothing to replicate here.
+/*
 const configFilePath = fileURLToPath(import.meta.url)
 const srcDir = fileURLToPath(new URL('../../src/', import.meta.url)).replace(/\\/g, '/')
 
@@ -40,6 +41,7 @@ const redirectSharedDepsFromSrc: Plugin = {
     return this.resolve(source, configFilePath, { skipSelf: true })
   },
 }
+*/
 
 // docs/examples/*.vue files (the live-example snippets shown and rendered on
 // the Live Examples page) import this package the same way a real consumer
@@ -51,6 +53,7 @@ const redirectSharedDepsFromSrc: Plugin = {
 // sources instead. Once resolution lands inside src/, redirectSharedDepsFromSrc
 // above takes over for src/index.ts's and src/vitepress.ts's own `vue`/
 // `vitepress` imports — the two plugins compose rather than overlap.
+/*
 const examplesDir = fileURLToPath(new URL('../examples/', import.meta.url)).replace(/\\/g, '/')
 
 const resolvePackageSpecifiersFromExamples: Plugin = {
@@ -69,14 +72,15 @@ const resolvePackageSpecifiersFromExamples: Plugin = {
     return null
   },
 }
+*/
 
 export default defineConfig({
   title: "BojuVue",
   description: "Shared Vue 3 component library for ScottKirvan's VitePress sites.",
   base: '/BojuVue/',
-  vite: {
-    plugins: [redirectSharedDepsFromSrc, resolvePackageSpecifiersFromExamples],
-  },
+  //vite: {
+  //plugins: [redirectSharedDepsFromSrc, resolvePackageSpecifiersFromExamples],
+  //},
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
