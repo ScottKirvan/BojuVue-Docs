@@ -1,14 +1,13 @@
 import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
-// Imports the vitepress-specific *source* entry (not the published
-// package's `./vitepress` subpath) so this site keeps live-previewing
-// components straight from this repo's own source, the same way it always
-// has — see notes/dev/vitepress-and-component-guide.md §2. This entry
-// re-exports everything the `../../../src/index` entry has, plus its own
-// VitePress-specific implementations, so registering from here alone is
-// enough.
+// This entry re-exports everything the bare `bojuvue` entry has, plus its
+// own VitePress-specific implementations, so registering from here alone
+// is enough.
 import * as BojuVue from 'bojuvue/vitepress'
+// Required separately from registering the components — see the
+// "unstyled component" entry in docs/appendix/troubleshooting.md for why.
+import 'bojuvue/style.css'
 import './custom.css'
 
 // Raw SVG for BVMoreButton's per-item `icon` prop (rendered via v-html) —
