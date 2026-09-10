@@ -1,4 +1,4 @@
-# CLAUDE.md — ScooterGitTemplate
+# CLAUDE.md — BojuVue-Docs
 
 ## Keeping This File Current
 

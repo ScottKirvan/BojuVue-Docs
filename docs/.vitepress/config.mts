@@ -1,16 +1,16 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: "ScooterGitTemplate",
+  title: "BojuVue-Docs",
   description: "TODO - Replace with your project description.",
-  base: '/ScooterGitTemplate/',
+  base: '/BojuVue-Docs/',
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'GitHub', link: 'https://github.com/ScottKirvan/ScooterGitTemplate' }
+      { text: 'GitHub', link: 'https://github.com/ScottKirvan/BojuVue-Docs' }
     ],
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/ScottKirvan/ScooterGitTemplate' },
+      { icon: 'github', link: 'https://github.com/ScottKirvan/BojuVue-Docs' },
       { icon: 'discord', link: 'https://discord.gg/TN6XJSNK5Y' }
     ],
     footer: {

@@ -1,6 +1,6 @@
-# Contributing to ScooterGitTemplate
+# Contributing to BojuVue-Docs
 
-First off, thank you for considering contributing to ScooterGitTemplate! It's people like you that make this template better for everyone.
+First off, thank you for considering contributing to BojuVue-Docs! It's people like you that make this template better for everyone.
 
 ## Code of Conduct
 
@@ -81,7 +81,7 @@ feat!: change template initialization to require manual trigger
 ## Project Structure
 
 ```
-ScooterGitTemplate/
+BojuVue-Docs/
 ├── .github/
 │   ├── gitignore-templates/    # Ready-to-use .gitignore files
 │   ├── release-please/         # Release-Please config and version manifest
