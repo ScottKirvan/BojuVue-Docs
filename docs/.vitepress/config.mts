@@ -78,9 +78,21 @@ export default defineConfig({
   title: "BojuVue",
   description: "Shared Vue 3 component library for ScottKirvan's VitePress sites.",
   base: '/BojuVue/',
-  //vite: {
-  //plugins: [redirectSharedDepsFromSrc, resolvePackageSpecifiersFromExamples],
-  //},
+  // Vite externalizes node_modules dependencies by default during an SSR
+  // build (vitepress build's client+server pass) -- which breaks bojuvue's
+  // internal `import { VPButton } from 'vitepress/theme'` inside its
+  // /vitepress entry, since an externalized import falls through to Node's
+  // raw ESM loader instead of Vite's own resolver. noExternal tells Vite to
+  // bundle bojuvue through its own resolver instead. See
+  // https://github.com/ScottKirvan/BojuVue/issues/70 -- BojuVue's own PR #72
+  // ships a `bojuvue/vite` plugin that does this automatically; swap to
+  // that (drop this block, add `import { bojuvue } from 'bojuvue/vite'` and
+  // `vite: { plugins: [bojuvue()] }`) once it's merged and published.
+  vite: {
+    ssr: {
+      noExternal: ['bojuvue'],
+    },
+  },
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
