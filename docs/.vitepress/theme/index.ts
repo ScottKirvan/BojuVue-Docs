@@ -8,7 +8,7 @@ import DefaultTheme from 'vitepress/theme'
 // re-exports everything the `../../../src/index` entry has, plus its own
 // VitePress-specific implementations, so registering from here alone is
 // enough.
-import * as BojuVue from '../../../src/vitepress'
+import * as BojuVue from 'bojuvue/vitepress'
 import './custom.css'
 
 // Raw SVG for BVMoreButton's per-item `icon` prop (rendered via v-html) —
